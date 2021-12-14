@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="includes">
+      <UniqueIdentifier>{292002a7-59aa-4a1c-9956-4ed2ecbee4b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config">
+      <UniqueIdentifier>{b196c38a-9cd4-4436-9f85-9a10550eb69c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="config.h">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="xorstr.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="console.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="clipper.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="clipboard.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="other.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="registry.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="colours.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
