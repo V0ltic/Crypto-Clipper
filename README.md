@@ -24,6 +24,7 @@ Malware that replaces copied crypto addresses with yours.
 5. Change the options in config.h
 
 ![tut 1](https://i.imgur.com/JWKDNqt.png)
+
 ![tut 2](https://i.imgur.com/IqQDDQ6.png)
 
 ## Disclaimer
