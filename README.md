@@ -12,9 +12,9 @@ Malware that replaces copied crypto addresses with yours.
 
 > Make sure you put it on Release
 
-> Make sure to use "ISO C++17 Standard (/std:c++17)" (Properties > General)
+> Make sure to use **"ISO C++17 Standard (/std:c++17)"** (Properties > General)
 
-> Make sure to use Multi-Byte (Properties > Advanced)
+> Make sure to use **Multi-Byte** (Properties > Advanced)
 
 > Change the options in config.h
 
