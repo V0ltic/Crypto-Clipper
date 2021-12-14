@@ -1,5 +1,5 @@
 # Crypto-Clipper
-Malware that replaces copied crypto addresses with yours.
+Malware which replaces copied crypto addresses with yours.
 
 ## 🪐 Features
 * Multiple cryptos supported (BTC, LTC, ETH, DOGE, DASH, NEO, BCH, XRP, XMR) 
