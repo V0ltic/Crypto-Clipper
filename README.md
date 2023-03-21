@@ -28,4 +28,4 @@ Malware which replaces copied crypto addresses with yours.
 ![tut 2](https://i.imgur.com/IqQDDQ6.png)
 
 ## Disclaimer
-This project should be used for ducational purposes only.
+This project should be used for educational purposes only.
