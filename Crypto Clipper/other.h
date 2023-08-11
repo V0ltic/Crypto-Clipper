@@ -31,16 +31,14 @@ void sleep(int ms) {
 }
 
 void log(std::string message) {
-    if (debugging) {
-        time_t* rawtime = new time_t;
-        struct tm* timeinfo;
+    time_t* rawtime = new time_t;
+    struct tm* timeinfo;
 
-        time(rawtime);
-        timeinfo = localtime(rawtime);
+    time(rawtime);
+    timeinfo = localtime(rawtime);
 
-        Color::Modifier primary(Color::FG_GREEN);
-        Color::Modifier secondary(Color::FG_WHITE);
+    Color::Modifier primary(Color::FG_GREEN);
+    Color::Modifier secondary(Color::FG_WHITE);
 
-        std::cout << primary << "[" << secondary << timeinfo->tm_hour << primary << ":" << secondary << timeinfo->tm_min << primary << ":" << secondary << timeinfo->tm_hour << primary << "] > " << secondary << message << std::endl;
-    }
+    std::cout << primary << "[" << secondary << timeinfo->tm_hour << primary << ":" << secondary << timeinfo->tm_min << primary << ":" << secondary << timeinfo->tm_hour << primary << "] > " << secondary << message << std::endl;
 }
