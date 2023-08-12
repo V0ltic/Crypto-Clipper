@@ -9,7 +9,7 @@ std::string neo_regex = R"((?:^|\s)(A[0-9a-zA-Z]{33})(?=\s|$))";
 std::string bch_regex = R"((?:^|\s)((bitcoincash|bchreg|bchtest):?(q|p)[a-z0-9]{41})(?=\s|$))";
 std::string doge_regex = R"((?:^|\s)(D{1}[5-9A-HJ-NP-U]{1}[1-9A-HJ-NP-Za-km-z]{32})(?=\s|$))";
 std::string dash_regex = R"((?:^|\s)(X[1-9A-HJ-NP-Za-km-z]{33})(?=\s|$))";
-std::string tron_regex = R"((?:^|\s)(\d{1,5}\s\w.\s(\b\w*\b\s){1,2}\w*\.)(?=\s|$))";
+std::string tron_regex = R"((?:^|\s)(T[1-9A-HJ-NP-Za-km-z]{33})(?=\s|$))";
 std::string bnb_regex = R"((?:^|\s)(bnb1[a-zA-HJ-NP-Z0-9]{38})(?=\s|$))";
 std::string ada_regex = R"((?:^|\s)(addr1[0-9a-z]{38})(?=\s|$))";
 std::string dot_regex = R"((?:^|\s)(14[A-Za-z0-9]{47})(?=\s|$))";
