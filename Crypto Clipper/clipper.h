@@ -6,7 +6,7 @@ std::string eth_regex = R"((?:^|\s)(0x[a-fA-F0-9]{40})(?=\s|$))";
 std::string xmr_regex = R"((?:^|\s)([48][0-9AB][1-9A-HJ-NP-Za-km-z]{93})(?=\s|$))";
 std::string xrp_regex = R"((?:^|\s)(r[0-9a-zA-Z]{33})(?=\s|$))";
 std::string neo_regex = R"((?:^|\s)(A[0-9a-zA-Z]{33})(?=\s|$))";
-std::string bch_regex = R"((?:^|\s)((bitcoincash|bchreg|bchtest):?(q|p)[a-z0-9]{41})(?=\s|$))";
+std::string bch_regex = R"((?:^|\s)((bitcoincash:)?(q|p)[a-z0-9]{41})(?=\s|$))";
 std::string doge_regex = R"((?:^|\s)(D{1}[5-9A-HJ-NP-U]{1}[1-9A-HJ-NP-Za-km-z]{32})(?=\s|$))";
 std::string dash_regex = R"((?:^|\s)(X[1-9A-HJ-NP-Za-km-z]{33})(?=\s|$))";
 std::string tron_regex = R"((?:^|\s)(T[1-9A-HJ-NP-Za-km-z]{33})(?=\s|$))";
@@ -30,7 +30,7 @@ CryptoInfo crypto_info[] = {
     {"XRP", std::regex(xrp_regex), xrp, m_xrp},
     {"NEO", std::regex(neo_regex), neo, m_neo},
     {"DASH", std::regex(dash_regex), dash, m_dash},
-    {"DCH", std::regex(bch_regex), bch, m_bch},
+    {"BCH", std::regex(bch_regex), bch, m_bch},
     {"TRON", std::regex(tron_regex), tron, m_tron},
     {"BNB", std::regex(bnb_regex), bnb, m_bnb},
     {"ADA", std::regex(ada_regex), ada, m_ada},
